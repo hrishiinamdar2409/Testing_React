@@ -1,0 +1,142 @@
+/* Global reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #333;
+    color: white;
+}
+
+/* Container for both calculator and log table */
+.calculator-log-container {
+    display: flex;
+    gap: 20px; /* Space between calculator and log table */
+}
+
+/* Styles for the calculator */
+.calculator {
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0px 0px 10px #888888;
+    border-radius: 10px;
+    width: 300px; /* Increased width for better display */
+}
+
+.display {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    text-align: right;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: white;
+}
+
+.button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    height: 60px;
+    font-size: 24px;
+    background-color: #444;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.eg {
+    background-color: #fb7c14;
+    color: white;
+}
+
+.eg:hover {
+    background-color: #e06b10;
+}
+
+/* Styles for the log table */
+.log-table-container {
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0px 0px 10px #888888;
+    border-radius: 10px;
+    width: 700px; /* Adjust as needed */
+    max-height: 500px; /* Limit the height of the container */
+    overflow-y: auto; /* Allows vertical scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Space for pagination controls */
+}
+
+.log-table th, .log-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.log-table th {
+    background-color: #444;
+}
+
+/* Styles for the pagination controls */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    margin: 0 10px;
+}
+
+
+
+
+/* Existing styles */
+
+.delete-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
+.delete-button:disabled {
+    background-color: #d9534f;
+    cursor: not-allowed;
+}
